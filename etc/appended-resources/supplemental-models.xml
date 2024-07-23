@@ -315,8 +315,8 @@
   </supplement>
   <supplement>
     <project>
-      <groupId>commons-collections</groupId>
-      <artifactId>commons-collections</artifactId>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
       <name>Apache Commons Collections</name>
       <organization>
         <name>The Apache Software Foundation</name>

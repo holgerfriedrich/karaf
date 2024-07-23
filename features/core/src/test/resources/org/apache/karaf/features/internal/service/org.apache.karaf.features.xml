@@ -73,7 +73,7 @@
              - candidate must have version lower than replacement
              - candidate must be in eligible range for update: [3.2.0, 3.2.2)
         -->
-        <bundle replacement="mvn:commons-collections/commons-collections/3.2.2" />
+        <bundle replacement="mvn:org.apache.commons/commons-collections4/4.4" />
         <bundle originalUri="mvn:org.eclipse.jetty.orbit/javax.servlet/[3,4)"
                 replacement="mvn:org.apache.geronimo.specs/geronimo-servlet_3.0_spec/1.0" mode="maven" />
         <!-- ... -->
