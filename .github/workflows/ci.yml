@@ -35,7 +35,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-24.04, windows-latest, macos-latest ]
+        os: [ ubuntu-24.04, windows-latest, macos-latest, ubuntu-latest ]
+        include:
+          - os: ubuntu-latest
+            mvn: 4.0.0-rc-5
 
     runs-on: ${{ matrix.os }}
 
@@ -48,6 +51,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: 'maven'
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@12eb41b233df95d49b0c11fc1b5bc8312e5d4ce0 # v5.1
+        if: matrix.mvn !=  ''
+        with:
+          maven-version: ${{ matrix.mvn }}
       - name: Build
         run: mvn -U -B -e clean install -Prat -DskipTests "-Dinvoker.skip=true"
       - name: Save Maven Local Repository
