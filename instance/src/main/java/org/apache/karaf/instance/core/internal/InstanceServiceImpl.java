@@ -530,8 +530,7 @@ public class InstanceServiceImpl implements InstanceService {
                   " --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED" +
                   " --add-exports=jdk.naming.rmi/com.sun.jndi.url.rmi=ALL-UNNAMED" +
                   " --add-exports=java.security.sasl/com.sun.security.sasl=ALL-UNNAMED" +
-                  " --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED" +
-                  " -Djava.security.manager=allow";
+                  " --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED";
 
         String command = "\""
                 + new File(System.getProperty("java.home"), ScriptUtils.isWindows() ? "bin\\java.exe" : "bin/java").getCanonicalPath()
