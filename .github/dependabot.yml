@@ -23,17 +23,23 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 0
     target-branch: "main"
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 0
     target-branch: "main"
     open-pull-requests-limit: 50
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 0
     target-branch: "karaf-4.4.x"
     commit-message:
       prefix: "[4.4.x] "
@@ -41,6 +47,8 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 0
     target-branch: "karaf-4.4.x"
     open-pull-requests-limit: 50
     ignore:
